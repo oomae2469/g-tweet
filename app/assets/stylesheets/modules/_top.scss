@@ -1,5 +1,5 @@
 .Header {
-  height: 60px;
+  height: 80px;
   width: 100vw;
   display: flex;
   justify-content: space-between;
@@ -19,7 +19,7 @@
   }
 }
 .Container {
-  height: calc( 100vh - 60px - 60px);
+  height: calc( 100vh - 80px - 40px);
   width: 100vw;
   background-image: url(https://burst.shopifycdn.com/photos/business-dog-paws-on-keyboard.jpg?width=1850&format=pjpg&exif=1&iptc=1);
   background-size: cover;
@@ -32,11 +32,11 @@
   }
 }
 .Footer {
-  height: 60px;
+  height: 40px;
   width: 100vw;
   background-color: rgb(229, 238, 236);
   text-align: center;
-  line-height: 60px;
+  line-height: 40px;
   color: gray;
   font-family: 'Sacramento', cursive;
 }
