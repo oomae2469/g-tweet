@@ -8,4 +8,15 @@
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    .Header
+      .Left-box
+        = link_to root_path do
+          G-TWEET
+      .Right-box
+        .Login
+          = link_to '#' do
+            Login
+        .Signup
+          = link_to '#' do
+            Signup
     = yield

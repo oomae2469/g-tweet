@@ -1,0 +1,63 @@
+.Contents {
+  display: flex;
+  .Side-menu {
+    height: calc( 100vh - 80px);
+    width: 15vw;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    flex-direction: column;
+    border-right: 1px solid rgb(204, 198, 198);
+    color: gray;
+    .User-image {
+      height: 70px;
+      width: 70px;
+      border-radius: 50%;
+      background-color: cadetblue;
+    }
+    .User-name {
+      margin-bottom: 15px;
+    }
+    .New-post {
+      margin-bottom: 15px;
+    }
+    .My-page {
+      margin-bottom: 15px;
+    }
+    .Direct-mail {
+      margin-bottom: 15px;
+    }
+  }
+  .Text-field {
+    height: calc( 100vh - 80px );
+    width: calc( 100vw - 15vw );
+    padding: 10px;
+    overflow: scroll;
+    .Message-box {
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      border-bottom: 1px solid rgb(204, 198, 198);
+      overflow: scroll;
+      .Tweet-name {
+        margin-bottom: 10px;
+      }
+      .Tweet-text {
+        margin-bottom: 10px;
+      }
+      .Tweet-image {
+        margin-bottom: 10px;
+      }
+      .Tweet-menu {
+        height: 20px;
+        width: 300px;
+        float: bottom;
+        display: flex;
+        justify-content: space-between;
+        color: gray;
+      }
+    }
+  }
+}
