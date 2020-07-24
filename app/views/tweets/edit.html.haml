@@ -1,6 +1,6 @@
 .Contents-row
   .Form-container
-    %h1.Tittle 新規投稿する
+    %h1.Tittle 編集する
     = form_with(model: @tweet, local: true) do |form|
       = form.text_field :name, placeholder: "Nickname"
       = form.text_field :image, placeholder: "Image Url"
