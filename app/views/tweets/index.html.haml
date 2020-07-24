@@ -25,9 +25,9 @@
         .Tweet-menu
           = link_to "#" do
             コメント
-          = link_to "#" do
+          = link_to edit_tweet_path(tweet.id), method: :get do
             編集
-          = link_to "#" do
+          = link_to  tweet_path(tweet.id), method: :delete do
             削除
           = link_to "#" do
             いいね
