@@ -1,0 +1,23 @@
+.Main-contents
+  .User-info
+    %h1.User-tittle ユーザー情報
+    = current_user.nickname
+    = current_user.email
+    .Edit-icon
+    = link_to edit_user_registration_path(current_user) do
+      編集
+  .Post-index
+    %h1.Post-tittle 投稿一覧
+    - @tweets.each do |tweet|
+      .Tweet-box
+        .User-tweet
+          = tweet.text
+        .Post-image
+          = tweet.image
+        .Tweet-date
+          = tweet.created_at
+        .Edit-menu
+          = link_to edit_tweet_path(tweet.id), method: :get do
+            編集
+          = link_to  tweet_path(tweet.id), method: :delete do
+            削除

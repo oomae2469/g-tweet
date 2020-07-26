@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'tweets#top'
-  resources :tweets, only: [:index, :new, :create, :edit, :update, :destroy]
+  resources :tweets
+  resources :users, only: :show
 end

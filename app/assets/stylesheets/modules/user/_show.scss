@@ -1,0 +1,41 @@
+.Main-contents {
+  width: 620px;
+  margin: 10px auto;
+  border: 3px solid gray;
+  .User-info {
+    height: 60px;
+    width: 600px;
+    margin: 10px auto;
+    border-bottom: 3px solid gray;
+    text-align: center;
+    .Edit-icon {
+      color: gray;
+    }
+  }
+  .Post-index {
+    height: calc( 100vh - 80px - 50px);
+    width: 600px;
+    margin: 0 auto;
+    overflow: scroll;
+    .Post-tittle {
+      padding: 10px;
+      text-align: center;
+      border-bottom: 3px solid gray;
+    }
+    .Tweet-box {
+      height: 150px;
+      width: 100%;
+      padding:15px;
+      border-bottom: 1px solid gray;
+      overflow: scroll;
+    }
+    .Edit-menu {
+      height: 20px;
+      width: 100px;
+      float: bottom;
+      display: flex;
+      justify-content: space-between;
+      color: gray;
+    }
+  }
+}

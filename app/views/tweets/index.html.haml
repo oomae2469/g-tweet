@@ -8,7 +8,7 @@
         = link_to new_tweet_path do
           新規投稿
       .My-page
-        = link_to '#' do
+        = link_to user_path(current_user) do
           マイページ
       .Direct-mail
         = link_to '#' do
@@ -17,18 +17,16 @@
     - @tweets.each do |tweet|
       .Message-box
         .Tweet-name
-        = tweet.name
+          = tweet.user.nickname
         .Tweet-text
-        = tweet.text
+          = tweet.text
         .Tweet-image
-        = tweet.image
+          = tweet.image
+        .Tweet-time
+          = tweet.created_at
         .Tweet-menu
           = link_to "#" do
             コメント
-          = link_to edit_tweet_path(tweet.id), method: :get do
-            編集
-          = link_to  tweet_path(tweet.id), method: :delete do
-            削除
           = link_to "#" do
             いいね
           
