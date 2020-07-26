@@ -4,7 +4,7 @@ class TweetsController < ApplicationController
   end
 
   def index
-    @tweets = Tweet.all
+    @tweets = Tweet.includes(:user).order("created_at DESC")
   end
 
   def new
@@ -42,7 +42,7 @@ class TweetsController < ApplicationController
 
   private
   def tweet_params
-    params.require(:tweet).permit(:name, :image, :text)
+    params.require(:tweet).permit(:image, :text).merge(user_id: current_user.id)
   end
   
   def move_to_top
