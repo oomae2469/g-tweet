@@ -12,11 +12,16 @@
       .Left-box
         = link_to root_path do
           G-TWEET
-      .Right-box
-        .Login
-          = link_to '#' do
+      - if user_signed_in?
+        .Right-box
+          = link_to destroy_user_session_path, method: :delete do
+            Logout
+          = link_to tweets_path do
+            Postindex
+      - else
+        .Right-box
+          = link_to new_user_session_path do
             Login
-        .Signup
-          = link_to '#' do
+          = link_to new_user_registration_path do
             Signup
     = yield

@@ -1,4 +1,5 @@
 class TweetsController < ApplicationController
+  before_action :move_to_top, except: :top
   def top
   end
 
@@ -42,5 +43,11 @@ class TweetsController < ApplicationController
   private
   def tweet_params
     params.require(:tweet).permit(:name, :image, :text)
+  end
+  
+  def move_to_top
+    unless user_signed_in?
+      redirect_to action: :top
+    end
   end
 end

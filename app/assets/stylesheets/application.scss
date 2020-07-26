@@ -1,7 +1,7 @@
 @import "reset";
-@import "modules/top";
-@import "modules/index";
-@import "modules/new";
-@import "modules/edit";
+@import "modules/tweet/top";
+@import "modules/tweet/index";
+@import "modules/tweet/new-edit";
+@import "modules/user/new-edit";
 @import "font-awesome-sprockets";
 @import "font-awesome";

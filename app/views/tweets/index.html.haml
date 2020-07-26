@@ -3,7 +3,7 @@
     .Menu-info
       .User-image
       .User-name
-        sample
+        = current_user.nickname
       .New-post
         = link_to new_tweet_path do
           新規投稿
