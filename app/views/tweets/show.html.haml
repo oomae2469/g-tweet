@@ -1,0 +1,20 @@
+.Contents-row
+  .Main
+    .Tweet-box
+      .Tweet-user
+        = @tweet.user.nickname
+      .Tweet-text
+        = @tweet.text
+    %h1.Comment-tittle ＜コメント一覧＞
+    .Comment-box
+      - if @comments
+        - @comments.each do |comment|
+          .Comment-info
+            .Comment-user
+              = comment.user.nickname
+            .Comment
+              = comment.text
+    .Comment-form
+      = form_with(model: [@tweet, @comment], local: true) do |form|
+        = form.text_area :text, placeholder: "コメントする", rows: "2"
+        = form.submit "SEND"

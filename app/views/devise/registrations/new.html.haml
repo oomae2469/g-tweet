@@ -1,5 +1,5 @@
 .Contents.row
-  .Form-container
+  .Form-contents
     %h2.Form-tittle Sign up
     = form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f|
       = devise_error_messages!
