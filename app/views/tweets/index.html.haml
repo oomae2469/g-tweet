@@ -25,9 +25,7 @@
         .Tweet-time
           = tweet.created_at
         .Tweet-menu
-          = link_to "#" do
+          = link_to tweet_path(tweet.id), method: :get do
             コメント
           = link_to "#" do
             いいね
-          
-          
