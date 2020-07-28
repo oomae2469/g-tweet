@@ -33,6 +33,18 @@
     width: calc( 100vw - 15vw );
     padding: 10px;
     overflow: scroll;
+    .search-form {
+      height: 60px;
+      width: 500px;
+      padding: 10px;
+      margin: 0 auto;
+      border-radius: 3px;
+      background-color: #d8eee9;
+      .search-input {
+        height: 40px;
+        width: 90%;
+      }
+    }
     .Message-box {
       padding: 15px;
       display: flex;
@@ -46,8 +58,13 @@
       }
       .Tweet-text {
         margin-bottom: 10px;
+        font-size: 20px;
       }
       .Tweet-image {
+        margin-bottom: 10px;
+      }
+      .Tweet-time {
+        font-size: 15px;
         margin-bottom: 10px;
       }
       .Tweet-menu {
