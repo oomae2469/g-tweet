@@ -1,8 +1,8 @@
 .Main-contents
   .User-info
     %h1.User-tittle ユーザー情報
-    = current_user.nickname
-    = current_user.email
+    = " ユーザー名:#{current_user.nickname}"
+    = " email:#{current_user.email}"
     .Edit-icon
     = link_to edit_user_registration_path(current_user) do
       編集
@@ -14,10 +14,10 @@
           = tweet.text
         .Post-image
           = tweet.image
-        .Tweet-date
+        .Tweet-time
           = tweet.created_at
         .Edit-menu
           = link_to edit_tweet_path(tweet.id), method: :get do
-            編集
+            %i.fas.fa-cog
           = link_to  tweet_path(tweet.id), method: :delete do
-            削除
+            %i.fas.fa-trash-alt
