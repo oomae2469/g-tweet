@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root 'tweets#top'
   resources :tweets do
     resources :comments, only: :create
+    post 'add' => 'likes#create'
+    delete '/add' => 'likes#destroy'
     collection do
       get 'search'
     end

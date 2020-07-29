@@ -28,10 +28,18 @@
       padding:15px;
       border-bottom: 1px solid gray;
       overflow: scroll;
+      .User-tweet {
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+      .Tweet-time{
+        font-size: 15px;
+      }
     }
     .Edit-menu {
       height: 20px;
       width: 100px;
+      margin-top: 20px;
       float: bottom;
       display: flex;
       justify-content: space-between;

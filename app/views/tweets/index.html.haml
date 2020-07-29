@@ -29,6 +29,8 @@
           = tweet.created_at
         .Tweet-menu
           = link_to tweet_path(tweet.id), method: :get do
-            コメント
-          = link_to "#" do
-            いいね
+            %i.fas.fa-comment
+          .Like-menu
+            %div{:id => "like-btn-#{tweet.id}"}
+              = render 'likes/like', tweet: tweet
+            
