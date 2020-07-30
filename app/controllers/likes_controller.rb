@@ -6,12 +6,14 @@ class LikesController < ApplicationController
       user = current_user
       tweet = Tweet.find(params[:tweet_id])
       like = Like.create(user_id: user.id, tweet_id: tweet.id)
+      redirect_to tweets_path
   end
   def destroy
       user = current_user
       tweet = Tweet.find(params[:tweet_id])
       like = Like.find_by(user_id: user.id, tweet_id: tweet.id)
       like.delete
+      redirect_to tweets_path
   end
 
   private
