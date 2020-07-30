@@ -4,7 +4,7 @@
    <% end %>
 <% else %>
    <%= link_to(tweet_add_path(tweet.id),method: :post,remote: true, id: :"like-button-#{tweet.id}") do %>
-       <i class="fa-lg fas fa-heart icon-btn not-like"></i>
+       <i class="fa-lg far fa-heart icon-btn not-like"></i>
    <% end %>
 <% end %>
 <%= tweet.likes.count %>

@@ -21,16 +21,20 @@
       .Message-box
         .Tweet-name
           = tweet.user.nickname
+          - if current_user != tweet.user
+            - if tweet.user.followed_by?(current_user)
+              = link_to "★", user_relationships_path(tweet.user.id), method: :delete
+            - else
+              = link_to "☆", user_relationships_path(tweet.user.id), method: :post              
         .Tweet-text
           = tweet.text
         .Tweet-image
           = tweet.image
         .Tweet-time
-          = tweet.created_at
+          = tweet.created_at.strftime("%Y-%m-%d %H:%M")
         .Tweet-menu
           = link_to tweet_path(tweet.id), method: :get do
             %i.fas.fa-comment
           .Like-menu
             %div{:id => "like-btn-#{tweet.id}"}
               = render 'likes/like', tweet: tweet
-            
