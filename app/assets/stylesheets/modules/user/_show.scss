@@ -3,11 +3,20 @@
   margin: 10px auto;
   border: 3px solid gray;
   .User-info {
-    height: 60px;
     width: 600px;
     margin: 10px auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     border-bottom: 3px solid gray;
     text-align: center;
+    .User-image {
+      height: 90px;
+      width: 90px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 1px solid black;
+    }
     .Edit-icon {
       color: gray;
     }

@@ -1,7 +1,7 @@
 .Contents
   .Side-menu
     .Menu-info
-      .User-image
+      = image_tag current_user.image.url, class: "User-image" if current_user.image?
       .User-name
         = current_user.nickname
       .New-post
@@ -20,16 +20,18 @@
     - @tweets.each do |tweet|
       .Message-box
         .Tweet-name
-          = tweet.user.nickname
+          = "ユーザー名:#{tweet.user.nickname}"
           - if current_user != tweet.user
             - if tweet.user.followed_by?(current_user)
               = link_to "★", user_relationships_path(tweet.user.id), method: :delete
             - else
               = link_to "☆", user_relationships_path(tweet.user.id), method: :post              
         .Tweet-text
+          投稿内容
+          %br/
           = tweet.text
         .Tweet-image
-          = tweet.image
+          = image_tag tweet.image.url if tweet.image?
         .Tweet-time
           = tweet.created_at.strftime("%Y-%m-%d %H:%M")
         .Tweet-menu

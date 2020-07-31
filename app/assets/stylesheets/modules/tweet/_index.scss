@@ -2,18 +2,22 @@
   display: flex;
   .Side-menu {
     height: calc( 100vh - 80px);
-    width: 15vw;
+    width: 20vw;
     display: flex;
     padding: 20px;
     align-items: center;
     flex-direction: column;
+    text-align: center;
     border-right: 1px solid rgb(204, 198, 198);
+    font-size: 20px;
     color: gray;
     .User-image {
-      height: 70px;
-      width: 70px;
+      height: 90px;
+      width: 90px;
+      margin: 0 auto;
+      border: 1px solid black;
       border-radius: 50%;
-      background-color: cadetblue;
+      object-fit: cover;
     }
     .User-name {
       margin-bottom: 15px;

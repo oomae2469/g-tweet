@@ -6,7 +6,9 @@
   justify-content: space-between;
   align-items: center;
   background-color: rgb(216, 238, 233);
-  font-family: 'Sacramento', cursive;
+  font-family: 'Amatic SC', cursive;
+  font-size: 20px;
+  font-weight: bold;
   color: gray;
   .Right-box {
     height: 80px;
@@ -24,9 +26,9 @@
   text-align: center;
   .Text {
     padding-top: 90px;
-    font-size: 100px;
-    font-family: 'Sacramento', cursive;
-    color: rgb(61, 58, 58);
+    font-size: 120px;
+    font-family: 'Amatic SC', cursive;
+    color: rgb(226, 112, 112);
   }
 }
 .Footer {
