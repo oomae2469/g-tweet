@@ -30,5 +30,12 @@
       font-size: 12px;
       margin-bottom: 10px;
     }
+    .Tweet-menu {
+      height: 40px;
+      width: 150px;
+      float: bottom;
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }

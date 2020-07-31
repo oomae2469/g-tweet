@@ -9,6 +9,10 @@
         %br/
         = f.text_field :nickname, autofocus: true, maxlength: "6"
       .field
+        = f.label :image
+        %br/
+        = f.file_field :image
+      .field
         = f.label :email
         %br/
         = f.email_field :email
