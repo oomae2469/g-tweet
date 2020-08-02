@@ -4,20 +4,20 @@
     = form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f|
       = devise_error_messages!
       .field
-        = f.label :nickname
+        = f.label :ニックネーム
         %em (6 characters maximum)
         %br/
         = f.text_field :nickname, autofocus: true, maxlength: "6"
       .field
-        = f.label :image
+        = f.label :プロフィール画像
         %br/
         = f.file_field :image
       .field
-        = f.label :email
+        = f.label :Eメール
         %br/
         = f.email_field :email
       .field
-        = f.label :password
+        = f.label :パスワード
         - if @validatable
           %em
             (#{@minimum_password_length} characters minimum)
